@@ -1,4 +1,22 @@
 <ion-content [fullscreen]="true">
 
+    <ion-button (click)="this.getFuncionarios()">Carregar Funcionários</ion-button>
+
+    <ng-container *ngFor="let func of this.funcionarios">
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="12" size-lg="5">
+                <ion-card>
+                    <ion-item>
+                    Nome: {{func.Nome}}
+                    </ion-item>
+                    <ion-item>
+                    Cargo: {{ func.Cargo}}
+                    </ion-item>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ng-container>
 
 </ion-content>
+
+
